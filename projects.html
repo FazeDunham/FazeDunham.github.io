@@ -1,1 +1,45 @@
 https://docs.google.com/document/d/1xXlr3q3TCDZTCbIhGucFlEeqAaR2vUUR3dFdXhectgk/edit?usp=sharing
+Project Summary
+
+This project explored homelessness data in the United States from 2010–2018 using public datasets available in Google BigQuery Public Datasets
+. The goal of the analysis was to identify trends, regional patterns, and populations most affected by homelessness, including veterans, chronically homeless individuals, and unaccompanied youth.
+
+Dataset Source
+
+The dataset came from the U.S. Department of Housing and Urban Development (HUD) homelessness data available through BigQuery public datasets:
+
+bigquery-public-data.sdoh_hud_pit_homelessness.hud_pit_by_coc
+
+The dataset contains Point-in-Time (PIT) homelessness counts reported by Continuums of Care (CoCs) across the United States.
+
+Tools Used
+Google BigQuery
+ for querying and analyzing the dataset
+SQL for data cleaning, transformation, and analysis
+BigQuery Preview and Schema tools for understanding data structure
+Google Search for researching SQL functions and dataset terminology
+Steps Taken to Analyze the Data
+Explored the dataset schema to understand column names, data types, and descriptions.
+Identified important homelessness categories such as sheltered, unsheltered, veteran, and chronic homelessness counts.
+Used SQL queries to count rows and explore the size of the dataset.
+Created a cleaned working table using SQL:
+Selected only relevant columns
+Removed unnecessary fields
+Created a new State column using:
+LEFT(CoC_Number, 2) AS State
+Reviewed the transformed table using the Preview tab to verify the data structure.
+Analyzed trends and regional patterns across states and Continuums of Care.
+Findings and Results
+The dataset contained over 31,000 records covering homelessness data from 2010–2018.
+Large urban areas consistently reported higher overall homelessness counts.
+Unsheltered homelessness varied significantly between states and regions.
+Some regions showed higher levels of veteran homelessness and chronically homeless populations.
+The LEFT() SQL function helped extract state abbreviations from Continuum of Care identifiers, making regional analysis easier.
+The dataset demonstrated how homelessness trends can change over time and vary based on location and available housing support programs.
+Future Questions to Explore
+Which states experienced the largest increases or decreases in homelessness over time?
+What regions had the most effective reductions in veteran homelessness?
+Is there a relationship between unsheltered homelessness and population density?
+How did youth homelessness trends change between 2010 and 2018?
+Which Continuums of Care showed the strongest improvements in housing support outcomes?
+Are there geographic patterns associated with chronic homelessness rates?
